@@ -1,0 +1,227 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  /* --foreground-rgb: white; */
+  /* --primary-color: #22ad01; */
+  --primary-color: #DD2476;
+  /* --primary-hover-color: #2BB90A; */
+  --primary-hover-color: #FA5252;
+}
+
+@font-face {
+  font-family: 'Gellix';
+  src: url('https://assets.website-files.com/635ac9564cc3682ce1536786/635fb61e2ce308f03abc7030_Gellix-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gellix';
+  src: url('https://assets.website-files.com/635ac9564cc3682ce1536786/635fb70c7b758d224fe06618_Gellix-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gellix';
+  src: url('https://assets.website-files.com/635ac9564cc3682ce1536786/635fb71b27b38271a9a0d2e7_Gellix-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gellix';
+  src: url('https://assets.website-files.com/635ac9564cc3682ce1536786/63ee426ccabe516725ec632f_Gellix-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* *:lang(en) {
+  font-family: 'Gellix', cursive !important;
+}
+
+*:lang(bn) {
+  font-family: 'Kalpurush', cursive !important;
+} */
+
+
+body {
+  height: 100%;
+  min-height: 100vh;
+  color: white;
+  /* color: white; 
+  /* background: black; */
+  /* background: linear-gradient(90deg, #000851 0%, #182848 100%); */
+  font-family: 'Gellix', cursive !important;
+  /* background-color: #330033;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='437' height='437' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23404' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23505'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E"); */
+
+  background-color: #0B0952;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23110F9C' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%2372C58F'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+
+
+
+.bg-primary {
+  color: white;
+  background-color: var(--primary-color);
+}
+
+button.bg-primary:hover {
+  background-color: var(--primary-hover-color) !important;
+}
+
+.box-shadow {
+  box-shadow: 0 0 20px 7px rgba(0, 0, 0, .1);
+}
+
+/*   font-poppins bg-white text-gray-lite font-medium mx-2.5  text-xtiny py-2.5 px-2 md:px-4 xl:px-5 items-center transition-all duration-300 ease-in-out dark:hover:text-white dark:bg-[#212425] hover:text-white hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476] dark:text-[#A6A6A6] linked bg-gradient-to-r */
+
+.btn {
+  cursor: pointer;
+  border-radius: 6px;
+  display: flex;
+  /* margin-left: 10px;
+  margin-right: 10px; */
+  padding: 10px 16px;
+  align-items: center;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bg-primary-gradient {
+  background-image: linear-gradient(to right, var(--primary-hover-color), var(--primary-color));
+}
+
+.bg-primary-gradient-hover:hover {
+  background-image: linear-gradient(to right, var(--primary-hover-color), var(--primary-color));
+}
+
+.bg-primary-gradient:hover {
+  background-image: linear-gradient(to left, var(--primary-hover-color), var(--primary-color));
+}
+
+
+@media (min-width: 1280px) {
+  .btn {
+    padding: 10px 20px;
+  }
+}
+
+.sub-menu {
+  position: absolute;
+}
+
+.sub-menu {
+  display: none;
+}
+
+.languageHover:hover .sub-menu {
+  display: block;
+  background-color: white;
+  overflow: auto;
+}
+
+/* .connect-email {
+  background-color: transparent;
+  border: 0 solid #000;
+  margin-bottom: 0;
+  margin-left: 20px;
+  padding-bottom: 10px;
+  font-size: 16px;
+} */
+
+
+
+
+.glass,
+.glass:hover,
+.glass.btn-active {
+  border: none;
+  -webkit-backdrop-filter: blur(var(--glass-blur, 40px));
+  backdrop-filter: blur(var(--glass-blur, 40px));
+  background-color: transparent;
+  background-image: linear-gradient(135deg, rgb(255 255 255 /30%) 0%, rgb(0 0 0 / 0%) 100%), linear-gradient(100deg, rgb(255 255 255 / 10%) 25%, rgb(0 0 0 / 0%) 25%);
+  box-shadow: 0 0 0 1px rgb(255 255 255 / 10%) inset, 0 0 0 2px rgb(0 0 0 / 5%);
+  text-shadow: 0 1px rgb(0 0 0 / 5%);
+}
+
+.left_circle {
+  /* top: -30px; */
+  left: -30px;
+  width: 170px;
+  height: 170px;
+  border-radius: 100px;
+  background: linear-gradient(to left top, #1CB5E0, #50e3c2);
+  position: absolute;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transition: all 250ms ease-out;
+  transition: all 250ms ease-out;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.hover_circle:hover .left_circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+}
+
+
+.right_circle {
+  position: absolute;
+  top: -60px;
+  right: -30px;
+  width: 180px;
+  height: 180px;
+  border-radius: 90px;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(49, 207, 171, 0.5)), to(#50e3c2));
+  background: linear-gradient(to right, rgba(49, 207, 171, 0.5), #50e3c2);
+  -webkit-transition: all 250ms ease-out;
+  transition: all 250ms ease-out;
+  -webkit-transition-delay: 50ms;
+  transition-delay: 50ms;
+  z-index: -1;
+}
+
+.hover_circle:hover .right_circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+}
+
+@media (max-width: 600px) {
+
+  .left_circle,
+  .right_circle {
+    width: 140px;
+    height: 140px;
+  }
+
+  .hover_circle:hover .left_circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+  }
+
+  .hover_circle:hover .right_circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+  }
+}
