@@ -1,13 +1,7 @@
 'use client'
-import HowServiceDelivery from "@/src/components/Home/HowServiceDelivery"
-import MyIntro from "@/src/components/Home/MyIntro"
-import MyWorkProcess from "@/src/components/Home/MyWorkProcess"
-import Pricing from "@/src/components/Home/Pricing"
-import Testimonial from "@/src/components/Home/Testimonial"
+
 import HeaderResume from "@/src/components/Resume/HeaderResume"
 import Skills from "@/src/components/Resume/Skills"
-import { getDictionary } from "@/src/language/language"
-import { createContext } from "react"
 import '../../src/components/Resume/skills.css'
 export default async function Home() {
   // console.log(await getDictionary('bn'))
