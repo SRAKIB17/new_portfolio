@@ -54,13 +54,12 @@ const Navbar = () => {
                                 )
                             })
                         }
-                        {/* <LanguageSelect /> */}
 
                     </ul>
                 </nav >
 
             </div >
-            < SideBarMenu sidebarMenuRef={sidebarMenuRef} />
+            <SideBarMenu sidebarMenuRef={sidebarMenuRef} />
         </header >
     );
 };
