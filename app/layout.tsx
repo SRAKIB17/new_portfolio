@@ -5,7 +5,6 @@ import './../src/components/shared/Navbar/Navbar.module.css'
 
 import { openGraphImage } from '@/src/shared/shared-metadata'
 import { cookies } from 'next/headers';
-import { getDictionary } from '@/src/language/language';
 
 
 export const metadata = {
