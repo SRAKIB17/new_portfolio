@@ -19,22 +19,22 @@ const skills = [
     },
     {
         skill: "TypeScript",
-        color: "#5185D4",
+        color: "#04fc43",
         parentage: 90
     },
     {
         skill: "NextJS",
-        color: "#CA56F2",
+        color: "#fee800",
         parentage: 90
     },
     {
         skill: "React",
-        color: "#CA56F2",
+        color: "#ff00be",
         parentage: 90
     },
     {
         skill: "Bootstrap",
-        color: "#CA56F2",
+        color: "#06ccff",
         parentage: 90
     },
     {
@@ -92,14 +92,59 @@ const knowledges = [
     'Print',
 ]
 const Skills = () => {
+
     return (
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 gap-8">
             <div className="col-span-1">
                 <h4 className="text-4xl font-medium mb-6">
                     Working Skills
                 </h4>
-                {
+                <div className=' grid grid-cols-8 gap-1'>
+                    {
+                        skills?.map((sk, index) => {
+                            const style: any = { "--clr": sk.color, "--num": sk.parentage }
+                            return (
+                                <div className="skills hover:shadow-md hover:translate-y-1 transition-all hover:scale-105 bg-indigo-900 rounded-md" key={index}>
+                                    <div className="percent" style={style}>
+                                        <div className="dot"></div>
+                                        <svg>
+                                            <circle
+                                                cx="70"
+                                                cy="70"
+                                                r="70"
+                                            ></circle>
+                                            <circle
+                                                cx="70"
+                                                cy="70"
+                                                r="70"
+                                            >
+                                            </circle>
+                                        </svg>
+
+
+                                        <div className="number">
+                                            <h2>
+                                                {sk.parentage}
+                                                <span>
+                                                    %
+                                                </span>
+                                            </h2>
+                                            <p>
+                                                {
+                                                    sk.skill
+                                                }
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            )
+                        })
+                    }
+                </div>
+                {/* {
                     skills?.map((sk, index) => {
                         return (
                             <div className=" mb-7" key={index}>
@@ -120,7 +165,7 @@ const Skills = () => {
                             </div>
                         )
                     })
-                }
+                } */}
 
             </div>
             <div className="col-span-1">
@@ -141,7 +186,7 @@ const Skills = () => {
                     }
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 

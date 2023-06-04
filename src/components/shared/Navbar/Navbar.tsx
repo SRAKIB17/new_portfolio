@@ -5,9 +5,11 @@ import SideBarMenu from './SideBarMenu';
 import SideProfileMenu from './SideProfileMenu';
 import style from './Navbar.module.css'
 import { LinkNavbar } from './LinkNavbar';
-import LanguageSelect from './LanguageSelect';
+import { usePathname } from 'next/navigation'
 
 const Navbar = () => {
+
+    const path = usePathname()
 
     const sidebarMenuRef = useRef({ style: { left: '100px' } })
 
@@ -36,8 +38,9 @@ const Navbar = () => {
                                 return (
                                     <li className="mb-1 hidden lg:block" key={index}>
                                         <a
-                                            className="btn bg-white text-black hover:text-white bg-primary-gradient-hover mx-2.5 "
-                                            href={_l?.link}>
+                                            className={(path?.includes(_l.link) ? " bg-primary-gradient text-white " : " hover:text-white bg-primary-gradient-hover ") + " btn bg-white text-black  mx-2.5 "}
+                                            href={_l?.link}
+                                        >
                                             <span className="mr-2 text-xl">
                                                 {
                                                     _l?.svg

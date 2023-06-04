@@ -8,6 +8,7 @@ import HeaderResume from "@/src/components/Resume/HeaderResume"
 import Skills from "@/src/components/Resume/Skills"
 import { getDictionary } from "@/src/language/language"
 import { createContext } from "react"
+import '../../src/components/Resume/skills.css'
 export default async function Home() {
   // console.log(await getDictionary('bn'))
   return (
