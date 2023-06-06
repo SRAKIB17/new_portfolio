@@ -5,11 +5,12 @@ import SideBarMenu from './SideBarMenu';
 import SideProfileMenu from './SideProfileMenu';
 import style from './Navbar.module.css'
 import { LinkNavbar } from './LinkNavbar';
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 
 const Navbar = () => {
 
     const path = usePathname()
+    const router = useRouter()
 
     const sidebarMenuRef = useRef({ style: { left: '100px' } })
 
@@ -37,9 +38,13 @@ const Navbar = () => {
                             LinkNavbar?.map((_l, index) => {
                                 return (
                                     <li className="mb-1 hidden lg:block" key={index}>
-                                        <a
+                                        <button
                                             className={(path?.includes(_l.link) ? " bg-primary-gradient text-white " : " hover:text-white bg-primary-gradient-hover ") + " btn bg-white text-black  mx-2.5 "}
-                                            href={_l?.link}
+                                            // href={_l?.link}
+                                            onClick={() => {
+                                                router.push(_l?.link)
+                                                router.prefetch(_l.link)
+                                            }}
                                         >
                                             <span className="mr-2 text-xl">
                                                 {
@@ -49,7 +54,7 @@ const Navbar = () => {
                                             {
                                                 _l.html
                                             }
-                                        </a>
+                                        </button>
                                     </li>
                                 )
                             })
