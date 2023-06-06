@@ -35,9 +35,9 @@ export default async function Home() {
                   </p>
                   <p>
                     <a
-                      href="tel:+452 666 386"
+                      href="tel:+8801873989651"
                       className="text-gray-500 hover:text-[#FA5252] duration-300 transition">
-                      +8801873989651
+                      +8801873-989651
                     </a>
                   </p>
                 </div>

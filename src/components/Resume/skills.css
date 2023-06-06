@@ -23,10 +23,9 @@
 }
 
 .skills .percent svg circle {
-
     fill: transparent;
-    stroke-width: 2;
-    stroke: #191919;
+    stroke-width: 3;
+    stroke: rgba(128, 128, 128, 0.536);
     transform: translate(5px, 5px);
 }
 
@@ -111,6 +110,6 @@
     font-weight: 300;
     font-size: 0.75em;
     letter-spacing: 2px;
-    text-transform: uppercase;
+    /* text-transform: uppercase    ; */
     color: rgba(255, 255, 255, 0.75);
 }

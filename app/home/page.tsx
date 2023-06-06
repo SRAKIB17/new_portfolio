@@ -10,12 +10,14 @@ import Testimonial from "@/src/components/Home/Testimonial"
 const social = [
   {
     svg: <svg stroke="currentColor"
-      fill="#1773EA" strokeWidth={0} viewBox="0 0 320 512" height="20" width="20"
+      fill="currentColor"
+      strokeWidth={0} viewBox="0 0 320 512" height="20" width="20"
       xmlns="http://www.w3.org/2000/svg">
       <path
         d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
     </svg>,
-    html: "facebook"
+    html: "facebook",
+    color: '#1773EA'
   },
   {
     svg: <svg stroke="currentColor" fill="#1C9CEA"
@@ -39,10 +41,10 @@ const social = [
 
 export default async function Home() {
   return (
-    <main>
-      <MyIntro />
+    <main className="h-full flex justify-center items-center">
+      {/* <MyIntro /> */}
 
-      <div className="flex flex-col items-center justify-center relative pb-40">
+      <div className="flex flex-col items-center justify-center relative py-20">
         <img alt="hero image"
           src="https://lh3.googleusercontent.com/drive-viewer/AFGJ81p37yjmoN-1c_qGlByZVAcDKzdpM5PK1wmcPJI4gGxH3TzwJXM6MtOuJADxNU22CPij1j1727NX_YndMlHhdK5KKNNg9g=w1238-h962" width={250} height={250}
           decoding="async" data-nimg={1} className="rounded-full w-[250px] h-[250px] 2xl:w-[280px] 2xl:h-[280px]"
@@ -51,18 +53,20 @@ export default async function Home() {
         <h3 className="mt-6 mb-1 text-5xl font-semibold dark:text-white">
           Rakibul Islam
         </h3>
-
-        <p className="mb-4 text-[#7B7B7B]">
-          Full-stack developer
-        </p>
+        <div className="pt-3">
+          {/* <embed src=" https://prog-learn.vercel.app/typewriter.svg?line=Web Developer;MERN Stack Developer;Node.js Developer;Full-Stack Developer;Front-End Developer;Back-End Developer;JavaScript Developer;React Developer;Python Developer&colors=orange;yellow;purple;blue;cyan;teal;green;orchid;turquoise&font_size=16" type="" /> */}
+          <embed src="/typewriter.svg" type="" className="w-44 block" />
+        </div>
 
         <div className="flex space-x-3">
           {
             social?.map((_s, index) => {
               return (
                 <a href="https://www.facebook.com/" target="_blank" key={index}
-                  rel="noopener noreferrer">
-                  <span className="socialbtn text-[#1773EA]">
+                  rel="noopener noreferrer"
+                  className=" hover:text-white bg-primary-gradient-hover text-[#1773EA] p-3 bg-white rounded-[4px]"
+                >
+                  <span className="">
                     {
                       _s.svg
                     }
@@ -80,16 +84,14 @@ export default async function Home() {
           className="btn bg-primary-gradient mt-5" style={{ borderRadius: "9999px" }}
         >
           <img
-            src="/images/download.png" alt="icon" className="mr-2" />
+            src="/asset/images/download.png" alt="icon" className="mr-2" />
           Download CV
         </a>
       </div>
 
+      {/* <Testimonial /> */}
 
-      <MyWorkProcess />
-      <HowServiceDelivery />
-      <Testimonial />
-      <Pricing />
+      {/* <Pricing /> */}
     </main >
 
   )

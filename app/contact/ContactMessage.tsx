@@ -46,10 +46,9 @@ const ContactMessage = () => {
                         </label>
                     </div>
                     <div className="relative z-0 w-full mb-8 group">
-                        <input
-                            type="text"
+                        <textarea
                             name="message"
-                            className="block autofill:bg-yellow-200 py-2.5 px-0 w-full text-sm text-gray-lite bg-transparent border-0 border-b-[2px] border-[#B5B5B5] appearance-none dark:text-white dark:border-[#333333] dark:focus:border-[#FF6464] focus:outline-none focus:ring-0 focus:border-[#CA56F2] peer"
+                            className="block min-h-[40px] autofill:bg-yellow-200 py-2.5 px-0 w-full text-sm text-gray-lite bg-transparent border-0 border-b-[2px] border-[#B5B5B5] appearance-none dark:text-white dark:border-[#333333] dark:focus:border-[#FF6464] focus:outline-none focus:ring-0 focus:border-[#CA56F2] peer"
                             placeholder=" "
                             id="message"
                             required />

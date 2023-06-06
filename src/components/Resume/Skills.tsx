@@ -58,11 +58,6 @@ const skills = [
         parentage: 50
     },
     {
-        skill: "MySql",
-        color: "#CA56F2",
-        parentage: 50
-    },
-    {
         skill: "MongoDB",
         color: "#CA56F2",
         parentage: 50
@@ -97,15 +92,34 @@ const Skills = () => {
 
         <div className="grid grid-cols-1 gap-8">
             <div className="col-span-1">
+                <h4 className="text-4xl dark:text-white font-medium mb-8">
+                    Knowledges
+                </h4>
+                <div className="flex gap-x-3 gap-y-3 md:gap-y-3 md:gap-x-3 flex-wrap">
+                    {
+                        knowledges?.map((know, index) => {
+                            return (
+                                <button key={index} className="rounded-[4px] cursor-default text-[15px] bg-[#ffffff30] py-1 px-3">
+                                    {
+                                        know
+                                    }
+                                </button>
+                            )
+                        })
+                    }
+                </div>
+            </div>
+
+            <div className="col-span-1">
                 <h4 className="text-4xl font-medium mb-6">
                     Working Skills
                 </h4>
-                <div className=' grid grid-cols-8 gap-1'>
+                <div className=' grid grid-cols-6 gap-1'>
                     {
                         skills?.map((sk, index) => {
                             const style: any = { "--clr": sk.color, "--num": sk.parentage }
                             return (
-                                <div className="skills hover:shadow-md hover:translate-y-1 transition-all hover:scale-105 bg-indigo-900 rounded-md" key={index}>
+                                <div className="skills hover:shadow-md hover:translate-y-1 transition-all hover:scale-105 rounded-md" key={index}>
                                     <div className="percent" style={style}>
                                         <div className="dot"></div>
                                         <svg>
@@ -168,24 +182,7 @@ const Skills = () => {
                 } */}
 
             </div>
-            <div className="col-span-1">
-                <h4 className="text-4xl dark:text-white font-medium mb-8">
-                    Knowledges
-                </h4>
-                <div className="flex gap-x-3 gap-y-3 md:gap-y-3 md:gap-x-3 flex-wrap">
-                    {
-                        knowledges?.map((know, index) => {
-                            return (
-                                <button key={index} className="rounded-[4px] cursor-default text-[15px] bg-[#ffffff30] py-1 px-3">
-                                    {
-                                        know
-                                    }
-                                </button>
-                            )
-                        })
-                    }
-                </div>
-            </div>
+
         </div >
     );
 };

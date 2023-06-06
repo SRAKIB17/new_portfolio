@@ -1,27 +1,11 @@
 'use client'
-import HowServiceDelivery from "@/src/components/Home/HowServiceDelivery"
-import MyIntro from "@/src/components/Home/MyIntro"
-import MyWorkProcess from "@/src/components/Home/MyWorkProcess"
-import Pricing from "@/src/components/Home/Pricing"
-import Testimonial from "@/src/components/Home/Testimonial"
-import { createContext } from "react"
+
 export default async function Home() {
-  // console.log(await getDictionary('bn'))
   return (
-    <main>
-      {/* <Image
-        src="/vercel.svg"
-        alt="Vercel Logo"
-        className="dark:invert"
-        width={100}
-        height={24}
-        priority
-      /> */}
-      <MyIntro />
-      <MyWorkProcess />
-      <HowServiceDelivery />
-      <Testimonial />
-      <Pricing />
+    <main className='flex items-center justify-center h-screen'>
+      <h1 className="text-center text-4xl text-gray-400 font-bold">
+        Coming soon
+      </h1>
     </main>
 
   )

@@ -3,37 +3,37 @@ import React from 'react';
 const data = {
     education: [
         {
-            duration: '2021 - 2023',
-            degree: 'Ph.D in Horriblensess',
-            institute: 'ABC University, Los Angeles, CA',
+            duration: '2022 - present',
+            degree: 'Computer Science and Engineering',
+            institute: 'Mymenshingh Engineering College',
         },
-        {
-            duration: '2019 - Present',
-            degree: 'Sr. Software Tester',
-            institute: 'Google Inc.',
-        },
-        {
-            duration: '2021',
-            degree: 'Best Developer',
-            institute: 'University Of Melbourne, NA',
-        },
+        // {
+        //     duration: '2019 - Present',
+        //     degree: 'Sr. Software Tester',
+        //     institute: 'Google Inc.',
+        // },
+        // {
+        //     duration: '2021',
+        //     degree: 'Best Developer',
+        //     institute: 'University Of Melbourne, NA',
+        // },
     ],
     experience: [
         {
-            duration: '2021 - 2023',
-            position: 'Ph.D in Horriblensess',
-            company: 'ABC University, Los Angeles, CA',
+            duration: '2022 - 2023',
+            position: 'Full-stack developer',
+            company: 'Collabtalent LLC.',
         },
-        {
-            duration: '2019 - Present',
-            position: 'Sr. Software Tester',
-            company: 'Google Inc.',
-        },
-        {
-            duration: '2021',
-            position: 'Best Developer',
-            company: 'University Of Melbourne, NA',
-        },
+        // {
+        //     duration: '2019 - Present',
+        //     position: 'Sr. Software Tester',
+        //     company: 'Google Inc.',
+        // },
+        // {
+        //     duration: '2021',
+        //     position: 'Best Developer',
+        //     company: 'University Of Melbourne, NA',
+        // },
     ],
     awards: [
         {
